@@ -6,34 +6,50 @@
   <title>石橋建築研究所</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-inner">
     <h1>石橋建築研究所</h1>
-    <nav>
+
+    <nav id="nav">
       <ul>
         <li><a href="#about">会社概要</a></li>
         <li><a href="#service">事業内容</a></li>
+        <li><a href="#policy">基本方針</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h2>建築に、確かな価値を。</h2>
-    <p>設計から材料まで一貫した品質を提供します</p>
+    <h2>建築に、確かな価値を</h2>
+    <p>設計・材料・技術で社会に貢献します</p>
   </div>
 </section>
 
 <section id="about" class="section">
   <div class="container">
     <h2>会社概要</h2>
-    <p><strong>社名：</strong>石橋建築研究所</p>
-    <p><strong>住所：</strong>〒920-1123 石川県金沢市AABB</p>
-    <p><strong>電話番号：</strong>076-1234-2345</p>
+
+    <div class="info">
+      <p><strong>社名：</strong>石橋建築研究所</p>
+      <p><strong>本社所在地：</strong>〒921-8112 石川県金沢市長坂3丁目10番1号</p>
+      <p><strong>金沢ラボ：</strong>〒921-8112 石川県金沢市長坂3丁目9-5</p>
+      <p><strong>いしかわサイエンスラボ：</strong>〒923-1211 能美市旭台2丁目5-17</p>
+      <p><strong>電話番号：</strong>076-41-8957</p>
+      <p><strong>メール：</strong>ishibashi.k.k@wind.ocn.ne.jp</p>
+    </div>
+
   </div>
 </section>
 
@@ -43,35 +59,55 @@
 
     <div class="cards">
       <div class="card">
-        <h3>建築設計</h3>
-        <p>住宅・商業施設など、機能性とデザイン性を両立した設計を行います。</p>
+        <h3>建築設計監理</h3>
+        <p>一級建築士事務所として設計から監理まで一貫して対応します。</p>
       </div>
 
       <div class="card">
-        <h3>コンクリート加工</h3>
-        <p>用途に応じた高品質なコンクリート材料の加工を提供します。</p>
+        <h3>コンサルタント業務</h3>
+        <p>建築に関する総合的な課題解決をサポートします。</p>
       </div>
 
       <div class="card">
-        <h3>材料販売</h3>
-        <p>建築現場に必要なコンクリート材料を柔軟に供給します。</p>
+        <h3>材料開発・販売</h3>
+        <p>建築・土木用材料や合成樹脂の開発・製造・販売を行います。</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="policy" class="section">
+  <div class="container">
+    <h2>基本方針</h2>
+    <p class="policy">
+      誠実さと品質を第一に、社会に永続的な価値を還元する
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
   <div class="container">
     <h2>お問い合わせ</h2>
-    <p>お気軽にお問い合わせください。</p>
-    <a href="tel:07612342345" class="btn">電話する</a>
+    <p>お気軽にご相談ください</p>
+    <a href="tel:076418957" class="btn">電話する</a>
+    <a href="mailto:ishibashi.k.k@wind.ocn.ne.jp" class="btn secondary">メール送信</a>
   </div>
 </section>
 
 <footer>
   <p>© 石橋建築研究所</p>
 </footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
